@@ -2,39 +2,212 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ChrisTutje.com</title>
+    <meta name="description" content="Portfolio of Christopher Tutje">
+    <meta name="author" content="Christopher Tutje">
+    <title>Christopher Tutje | Portfolio</title>
+    <link rel="stylesheet" href="CSS/colorPalette.css">
     <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="CSS/style.css">
+    <script defer src="script.js"></script>
+    <style>
+        /* Banner */
+        #banner {
+            background-color: var(--grey);
+            border-bottom: 1px solid var(--automatic);
+        }
+
+        /* Footer */
+        #footer {
+            background-color: var(--grey);
+            border-top: 1px solid var(--automatic);
+        }
+
+        /* Navbar */
+        #navbar {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: red;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            padding: 10px;
+        }
+
+        /* Navbar button styles */
+        #navbar button {
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        /* Button hover */
+        #navbar button:hover {
+            background-color: lightgrey;
+        }
+
+        /* Dropdown container (hidden by default) */
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: white;
+            border: 1px solid black;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Dropdown link styles */
+        .dropdown a {
+            display: block;
+            padding: 10px;
+            color: black;
+            text-decoration: none;
+        }
+
+        /* Dropdown link hover */
+        .dropdown a:hover {
+            background-color: lightgrey;
+        }
+
+        /* Resume styles */
+        #resume {
+            padding: 20px;
+        }
+        
+        .resume-section {
+            margin-bottom: 20px;
+        }
+        
+        .resume-section h2 {
+            border-bottom: 2px solid var(--grey);
+            padding-bottom: 5px;
+        }
+        
+        .resume-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .resume-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .resume-section p {
+            margin-bottom: 10px;
+        }
+        
+        .resume-section a {
+            color: blue;
+            text-decoration: none;
+        }
+        
+        .resume-section a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <div class="banner">
-        <img src="image.jpg" alt="Banner Image Description" style="max-width: 100%; height: auto;">
-        <h2>Banner</h2>
-        <p>Text</p>
-    </div>
-
-    <header>
-        <h1>Header</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-            </ul>
-        </nav>
+    <!-- Banner Section -->
+    <header id="banner">
+        <h1>Welcome to My Portfolio</h1>
+        <!-- Placeholder for images/animations -->
     </header>
 
-    <main>
-        <section id="home">
-            <h2>Home</h2>
-            <p>Text</p>
+    <!-- Navbar Section -->
+    <nav id="navbar">
+        <button>Button 1</button>
+        <button>Button 2</button>
+        <button>Button 3</button>
+    </nav>
+
+    <!-- Main Resume Section -->
+    <main id="resume">
+        <section class="resume-section">
+            <h2>Contact Information</h2>
+            <p>
+                Christopher Tutje<br>
+                Ankeny, IA<br>
+                (515)-868-3366<br>
+                <a href="mailto:chris.tutje@gmail.com">chris.tutje@gmail.com</a><br>
+                <a href="https://linkedin.com/in/christophertutje" target="_blank">LinkedIn</a> | 
+                <a href="https://github.com/christophertutje" target="_blank">GitHub</a>
+            </p>
         </section>
 
-    <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <section class="resume-section">
+            <h2>Experience</h2>
+            <h3>Certified Nurse’s Assistant | Valley View Village (2012-2022)</h3>
+            <ul>
+                <li>Assisted 20-50 residents in performing activities of daily living including personal hygiene, mobility, medical device maintenance, serving food, cleaning, and keeping medical records.</li>
+                <li>Ensured empathic care and maintained perfect attendance over 10 years of service.</li>
+            </ul>
+
+            <h3>Food Service Cashier | Adventureland (2010-2012)</h3>
+            <ul>
+                <li>Served food and operated a cash register while maintaining a clean environment.</li>
+            </ul>
+        </section>
+
+        <section class="resume-section">
+            <h2>Skills</h2>
+            <ul>
+                <li>Programming Languages: Python, Java, C++, Object Oriented Programming, data structures, algorithms</li>
+                <li>Web Development: HTML, CSS, JavaScript, Vite, Node.js, Express.js, React.js</li>
+                <li>Databases: SQL, MongoDB</li>
+                <li>Testing: Jest, Cypress, Junit</li>
+                <li>Version Control: GitHub, Gitlab</li>
+                <li>Tools: Docker, VS Code</li>
+                <li>Music: piano, percussion, synthesizer, composition, audio engineering, music history, music theory</li>
+                <li>Miscellaneous: time management, cashier, biology, history</li>
+            </ul>
+        </section>
+
+        <section class="resume-section">
+            <h2>Education</h2>
+            <h3>TechWise cohort 2 fellowship program (2023-2024)</h3>
+            <ul>
+                <li>Trained hands-on in programming and web development by Google.</li>
+                <li>Achievements: Directed groups of 5 programmers to create successful group projects.</li>
+            </ul>
+
+            <h3>Des Moines Area Community College | Ankeny, IA (2023-2023)</h3>
+            <ul>
+                <li>Certifications: Computer Languages Diploma.</li>
+                <li>Achievements: President’s list with 4.0 GPA, member of philosophy, creative writing, and fencing clubs.</li>
+            </ul>
+
+            <h3>Grand View University | Des Moines, IA (2012-2017)</h3>
+            <ul>
+                <li>Certifications: Bachelor of Arts degree in Biology and Piano Performance.</li>
+                <li>Achievements: Completed a double-major in a liberal arts program.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Carousel Section -->
+    <section id="carousel">
+        <h2>Featured Blogs</h2>
+        <div class="carousel-container">
+            <div class="carousel-item">
+                <a href="blog1.html">
+                    <img src="blog1.jpg" alt="Blog 1">
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="blog2.html">
+                    <img src="blog2.jpg" alt="Blog 2">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <p>&copy; 2024 Christopher Tutje. All rights reserved.</p>
         <p><a href="#">Back to top</a></p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
