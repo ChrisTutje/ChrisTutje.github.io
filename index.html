@@ -16,23 +16,28 @@
         #banner {
             background-color: var(--grey);
             border-bottom: 1px solid var(--automatic);
+            padding: 2rem;
+            text-align: center;
         }
 
         /* Footer */
         #footer {
             background-color: var(--grey);
             border-top: 1px solid var(--automatic);
+            text-align: center;
+            padding: 2rem;
         }
 
         /* Navbar */
         #navbar {
             display: flex;
             flex-direction: row;
+            justify-content: center;
             align-items: center;
             background-color: red;
             border-top: 1px solid black;
             border-bottom: 1px solid black;
-            padding: 10px;
+            padding: 1rem;
         }
 
         /* Navbar button styles */
@@ -40,9 +45,10 @@
             background-color: white;
             color: black;
             border: none;
-            padding: 10px 20px;
-            margin: 0 5px;
+            padding: 0.8rem 1.5rem;
+            margin: 0 0.5rem;
             cursor: pointer;
+            font-size: 1rem;
         }
 
         /* Button hover */
@@ -56,13 +62,13 @@
             position: absolute;
             background-color: white;
             border: 1px solid black;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
         }
 
         /* Dropdown link styles */
         .dropdown a {
             display: block;
-            padding: 10px;
+            padding: 0.8rem;
             color: black;
             text-decoration: none;
         }
@@ -74,16 +80,24 @@
 
         /* Resume styles */
         #resume {
-            padding: 20px;
+            padding: 2rem;
+            max-width: 80%;
+            margin: 0 auto; /* Center the resume content */
         }
         
         .resume-section {
-            margin-bottom: 20px;
+            background-color: white;
+            border: 1px solid lightgrey;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 0.5rem; /* Adds rounded corners */
+            box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
         }
         
         .resume-section h2 {
-            border-bottom: 2px solid var(--grey);
-            padding-bottom: 5px;
+            border-bottom: 0px solid var(--grey);
+            padding-bottom: 0.5rem;
+            font-size: 1.5rem;
         }
         
         .resume-section ul {
@@ -92,11 +106,11 @@
         }
         
         .resume-section ul li {
-            margin-bottom: 10px;
+            margin-bottom: 1rem;
         }
         
         .resume-section p {
-            margin-bottom: 10px;
+            margin-bottom: 1rem;
         }
         
         .resume-section a {
@@ -106,6 +120,25 @@
         
         .resume-section a:hover {
             text-decoration: underline;
+        }
+
+        /* Carousel */
+        #carousel {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .carousel-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .carousel-item img {
+            width: 9.375rem; /* 150px in rem */
+            height: 9.375rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
@@ -118,9 +151,9 @@
 
     <!-- Navbar Section -->
     <nav id="navbar">
-        <button>Button 1</button>
-        <button>Button 2</button>
-        <button>Button 3</button>
+        <button>Contact Me</button>
+        <button>Audio Options</button>
+        <button>Color Scheme Options</button>
     </nav>
 
     <!-- Main Resume Section -->
@@ -132,27 +165,33 @@
                 Ankeny, IA<br>
                 (515)-868-3366<br>
                 <a href="mailto:chris.tutje@gmail.com">chris.tutje@gmail.com</a><br>
-                <a href="https://linkedin.com/in/christophertutje" target="_blank">LinkedIn</a> | 
-                <a href="https://github.com/christophertutje" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/christopher-tutje" target="_blank">LinkedIn</a> | 
+                <a href="https://github.com/ChrisTutje" target="_blank">GitHub</a>
             </p>
         </section>
 
         <section class="resume-section">
-            <h2>Experience</h2>
+            <h2>Objective</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </section>
+
+        <section class="resume-section">
+            <h2>Work Experience</h2>
             <h3>Certified Nurse’s Assistant | Valley View Village (2012-2022)</h3>
             <ul>
                 <li>Assisted 20-50 residents in performing activities of daily living including personal hygiene, mobility, medical device maintenance, serving food, cleaning, and keeping medical records.</li>
                 <li>Ensured empathic care and maintained perfect attendance over 10 years of service.</li>
             </ul>
 
-            <h3>Food Service Cashier | Adventureland (2010-2012)</h3>
+            <h3>Food Service Cashier | Adventureland Parks (2010-2012)</h3>
             <ul>
                 <li>Served food and operated a cash register while maintaining a clean environment.</li>
             </ul>
         </section>
 
         <section class="resume-section">
-            <h2>Skills</h2>
+            <h2>Professional Skills</h2>
             <ul>
                 <li>Programming Languages: Python, Java, C++, Object Oriented Programming, data structures, algorithms</li>
                 <li>Web Development: HTML, CSS, JavaScript, Vite, Node.js, Express.js, React.js</li>
@@ -185,20 +224,31 @@
                 <li>Achievements: Completed a double-major in a liberal arts program.</li>
             </ul>
         </section>
+
+        <section class="resume-section">
+            <h2>Passions</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </section>
     </main>
 
     <!-- Carousel Section -->
     <section id="carousel">
-        <h2>Featured Blogs</h2>
+        <h2>Projects</h2>
         <div class="carousel-container">
             <div class="carousel-item">
                 <a href="blog1.html">
-                    <img src="blog1.jpg" alt="Blog 1">
+                    <img src="blog1.jpg" alt="Project Arecibo">
                 </a>
             </div>
             <div class="carousel-item">
                 <a href="blog2.html">
-                    <img src="blog2.jpg" alt="Blog 2">
+                    <img src="blog2.jpg" alt="Return of the Fallen">
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="blog3.html">
+                    <img src="blog3.jpg" alt="Blog 3">
                 </a>
             </div>
         </div>
@@ -206,8 +256,8 @@
 
     <!-- Footer Section -->
     <footer id="footer">
+        <p><a href="#banner">Back to top</a></p>
         <p>&copy; 2024 Christopher Tutje. All rights reserved.</p>
-        <p><a href="#">Back to top</a></p>
     </footer>
 </body>
 </html>
