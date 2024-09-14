@@ -1,4 +1,5 @@
 @import './colorPalette.css';
+@import './spacing.css';
 
 body {
     color: var(--black);

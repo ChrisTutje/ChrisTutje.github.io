@@ -8,6 +8,7 @@
     <meta name="author" content="Christopher Tutje">
     <title>Christopher Tutje | Portfolio</title>
     <link rel="stylesheet" href="CSS/colorPalette.css">
+    <link rel="stylesheet" href="CSS/spacing.css">
     <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="CSS/style.css">
     <script defer src="script.js"></script>
@@ -15,17 +16,17 @@
         /* Banner */
         #banner {
             background-color: var(--grey);
-            border-bottom: 1px solid var(--automatic);
-            padding: 2rem;
+            border-bottom: 1px solid var(--slate);
+            padding: var(--spacing-xxl);
             text-align: center;
         }
 
         /* Footer */
         #footer {
             background-color: var(--grey);
-            border-top: 1px solid var(--automatic);
+            border-top: 1px solid var(--slate);
             text-align: center;
-            padding: 2rem;
+            padding: var(--spacing-xxl);
         }
 
         /* Navbar */
@@ -34,10 +35,10 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            background-color: red;
-            border-top: 1px solid black;
-            border-bottom: 1px solid black;
-            padding: 1rem;
+            background-color: var(--red);
+            border-top: 1px solid var(--maroon);
+            border-bottom: 1px solid var(--maroon);
+            padding: var(--spacing-m);
         }
 
         /* Navbar button styles */
@@ -80,7 +81,7 @@
 
         /* Resume styles */
         #resume {
-            padding: 2rem;
+            padding: var(--spacing-l);
             max-width: 80%;
             margin: 0 auto; /* Center the resume content */
         }
@@ -88,16 +89,30 @@
         .resume-section {
             background-color: white;
             border: 1px solid lightgrey;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            border-radius: 0.5rem; /* Adds rounded corners */
+            padding: var(--spacing-m);
+            margin-bottom: var(--spacing-m);
+            border-radius: var(--spacing-l); /* Adds rounded corners */
             box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
         }
         
         .resume-section h2 {
             border-bottom: 0px solid var(--grey);
-            padding-bottom: 0.5rem;
+            padding-top: calc(1.272em / 2.618) ;
+            padding-right: calc(1.618em / 1.272) ;
+            padding-left: calc(1.618em / 2.618);
+            padding-bottom: var(--spacing-xs);
             font-size: 1.5rem;
+            color: var(--black);
+        }
+
+        .resume-section h3 {
+            border-bottom: 0px solid var(--grey);
+            padding-top: calc(1.272em / 2.618) ;
+            padding-right: calc(1.618em / 1.272) ;
+            padding-left: calc(1.618em / 2.618);
+            padding-bottom: var(--spacing-xs);
+            font-size: 1.25rem;
+            color: var(--automatic);
         }
         
         .resume-section ul {
@@ -111,10 +126,11 @@
         
         .resume-section p {
             margin-bottom: 1rem;
+            color: var(--silver);
         }
         
         .resume-section a {
-            color: blue;
+            color: var(--info);
             text-decoration: none;
         }
         
@@ -124,20 +140,20 @@
 
         /* Carousel */
         #carousel {
-            padding: 2rem;
+            padding: var(--spacing-m);
             text-align: center;
         }
 
         .carousel-container {
             display: flex;
             justify-content: center;
-            gap: 2rem;
+            gap: var(--spacing-m);
         }
 
         .carousel-item img {
             width: 9.375rem; /* 150px in rem */
             height: 9.375rem;
-            border-radius: 0.5rem;
+            border-radius: var(--spacing-s);
             box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
         }
     </style>

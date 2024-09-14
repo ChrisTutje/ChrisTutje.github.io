@@ -1,0 +1,17 @@
+:root {
+    --spacing-extra-extra-small: .236em;
+    --spacing-extra-small: .382em;
+    --spacing-small: .618em;
+    --spacing-medium: 1em;
+    --spacing-large: 1.618em;
+    --spacing-extra-large: 2.618em;
+    --spacing-extra-extra-large: 4.236em;
+
+    --spacing-xxs: .236em;
+    --spacing-xs: .382em;
+    --spacing-s: .618em;
+    --spacing-m: 1em;
+    --spacing-l: 1.618em;
+    --spacing-xl: 2.618em;
+    --spacing-xxl: 4.236em;
+}
