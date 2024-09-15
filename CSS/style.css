@@ -19,9 +19,32 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     color: #333;
-    font-size: 2rem;
     line-height: 1.2;
     text-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+}
+
+h1{
+ font-size: 2rem;
+}
+
+h2{
+    font-size: 1.75rem;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+h4{
+    font-size: 1.333rem;
+}
+
+h5{
+    font-size: 1.25rem;
+}
+
+h6{
+    font-size: 1rem;
 }
 
 p, li {
@@ -120,15 +143,23 @@ html {
     }
 }
 
-/* ::-webkit-scrollbar {
-    width: 1rem;
-} */
+::-webkit-scrollbar {
+    width: 1vw;
+}
 
-/* ::-webkit-scrollbar-thumb {
-    background: #888;
+::-webkit-scrollbar-thumb {
+    background: #7775;
     border-radius: 0.625rem;
-} */
+}
 
-/* ::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
     background: #555;
-} */
+}
+
+::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+
+::-webkit-scrollbar-track:hover {
+    background: #ffffff;
+}
