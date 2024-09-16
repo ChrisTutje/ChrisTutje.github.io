@@ -159,27 +159,36 @@
         }
 
         .audio-player {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 3.125em;
-            border: 1px solid var(--gloam);
-            background: var(--mutedPurple);
-        }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0px solid var(--gloam);
+    background: var(--mutedPurple);
+    width: 100%; 
+    max-width: 280px; 
+    margin: 0 auto;
+    padding: 1rem;
+    box-sizing: border-box; 
+}
 
-        .playlist {
-            display: flex;
-            flex-direction: column; 
-            align-items: flex-start; 
-            
-        }
+.audio-player audio {
+    width: 100%; 
+}
 
-        .playlist button {
-            margin: .0625em;
-            padding: .0625em 1.25em;
-            font-size: 1rem;
-            cursor: pointer;
-        }
+.playlist {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; 
+    width: 100%;
+}
+
+.playlist button {
+    margin: 0.25rem 0; 
+    padding: 0.5rem;
+    font-size: 0.9rem; 
+    cursor: pointer;
+    width: 100%; 
+}
 
         /* Sidebar styles */
         #sidebar {
@@ -192,41 +201,40 @@
             background-color: var(--mutedPurple);
             overflow-x: hidden;
             transition: 0.3s;
-            padding-top: 60px;
+            padding-top: 3.75rem;
         }
 
         #sidebar a {
-            padding: 8px 8px 8px 32px;
-            text-decoration: none;
-            font-size: 25px;
-            color: var(--black);
-            display: block;
-            transition: 0.3s;
-        }
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--lightPurple);
+    display: block;
+    transition: 0.3s;
+}
 
         #sidebar a:hover {
-            color: var(--red);
+            color: var(--visited);
         }
 
         #sidebar .close-btn {
-            position: absolute;
-            top: 10px;
-            right: 25px;
-            font-size: 36px;
-            margin-left: 50px;
-        }
+    position: absolute;
+    top: 0.625rem; /* 10px */
+    right: 1.5625rem; /* 25px */
+    font-size: 2.25rem; /* 36px */
+}
 
         /* Button to open sidebar */
         #open-sidebar-btn {
             font-size: 1.125rem;
             cursor: pointer;
-            padding: 10px;
+            padding: 0.625rem; /* 10px */
             background-color: var(--mutedPurple);
             color: var(--black);
             border: none;
             position: fixed;
-            top: 15px;
-            left: 15px;
+            top: 1rem; /* 15px */
+            left: 1rem; /* 15px */
             z-index: 2;
         }
 
