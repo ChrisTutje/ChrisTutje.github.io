@@ -132,3 +132,8 @@ html {
 body > :is(header, footer) main, section, article {
     container-type: inline-size;
 }
+
+p, li, figcaption {
+    text-wrap: pretty;
+    max-width: none; 
+}
