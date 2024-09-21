@@ -80,6 +80,29 @@
             background-color: lightgrey;
         }
 
+        @media (max-width: 768px) {
+    #navbar {
+        flex-direction: column; /* Stack buttons vertically */
+        padding: var(--spacing-s); /* Reduce padding */
+    }
+
+    #navbar button {
+        font-size: 0.9rem; /* Adjust font size */
+        padding: 0.6rem 1rem; /* Reduce button padding */
+        width: 100%; /* Make buttons take full width */
+        margin-bottom: 0.5rem; /* Add space between buttons */
+    }
+
+    /* Optional: Reduce text size on other sections for mobile */
+    .resume-section h2, .resume-section h3 {
+        font-size: 1.25rem; /* Scale down section titles */
+    }
+
+    .resume-section p {
+        font-size: 0.9rem; /* Scale down paragraph text */
+    }
+}
+
         /* Resume styles */
         #resume {
             padding: var(--spacing-l);
