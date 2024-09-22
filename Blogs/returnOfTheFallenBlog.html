@@ -80,6 +80,29 @@
             background-color: lightgrey;
         }
 
+        @media (max-width: 768px) {
+    #navbar {
+        flex-direction: column; /* Stack buttons vertically */
+        padding: var(--spacing-s); /* Reduce padding */
+    }
+
+    #navbar button {
+        font-size: 0.9rem; /* Adjust font size */
+        padding: 0.6rem 1rem; /* Reduce button padding */
+        width: 100%; /* Make buttons take full width */
+        margin-bottom: 0.5rem; /* Add space between buttons */
+    }
+
+    /* Optional: Reduce text size on other sections for mobile */
+    .resume-section h2, .resume-section h3 {
+        font-size: 1.25rem; /* Scale down section titles */
+    }
+
+    .resume-section p {
+        font-size: 0.9rem; /* Scale down paragraph text */
+    }
+}
+
         /* Blog styles */
         #blog {
             padding: var(--spacing-l);
@@ -162,16 +185,16 @@
         <h1>Blog</h1>
         <section class="blog-section">
         <h2>Functionality</h2>
-        <p>Return of the Fallen is a small turn-based RPG with an overworld, battlesystem, and original soundtrack. It was inspired by RPG's of old like FInal Fantasy.</p>
+        <p>Return of the Fallen is a small turn-based RPG with an overworld, battlesystem, and original soundtrack. It was inspired by classic RPG's like Final Fantasy.</p>
         </section>
         <section class="blog-section">
         <h2>Dependencies</h2>
-        <p>Return of the Fallen was built in the Unity game engine, which is based in C#. The sound effects and instruments were created using Vital, and the music was arranged using FL studio as a DAW. </p>
+        <p>Return of the Fallen was built in the <a href="https://unity.com/" target="_blank">Unity</a> game engine, which is based in C#. GitHub was used as version control. The sound effects and instruments were created from scratch using <a href="https://vital.audio/" target="_blank">Vital</a>, and the music was arranged using <a href="https://www.image-line.com/fl-studio/" target="_blank">FL Studio</a> as a DAW. </p>
         </section>
         <section class="blog-section">
         <h2>Group</h2>
-        <p>Return of the Fallen was created by team Pixel Plunderers over the course of 6 weeks for the first TechWise cohort II group project.
-        It consisted of Eric Holman as the lead UI designer and battle animator, Amber Miller as the cutscene designer, Jaya Sicard as the overworld designer, and Adam Ahmetasevic as character movement.
+        <p>Return of the Fallen was created by team Pixel Plunderers over the course of 6 weeks for the first <a href="https://techwise.talentsprint.com/" target="_blank">TechWise</a> cohort II group project.
+        It consisted of <a href="https://www.linkedin.com/in/eric-holman-8a2718207/" target="_blank">Eric Holman</a> as the lead UI designer and battle animator, <a href="https://www.linkedin.com/in/amber-miller-ab08b1169/" target="_blank">Amber Miller</a> as the cutscene designer, <a href="https://www.linkedin.com/in/jaya-sicard-9a0119231/" target="_blank">Jaya Sicard</a> as the overworld designer, and <a href="https://www.linkedin.com/in/adam-ahmetasevic/" target="_blank">Adam Ahmetasevic</a> as character movement.
         </p>
         </section>
         <section class="blog-section">
