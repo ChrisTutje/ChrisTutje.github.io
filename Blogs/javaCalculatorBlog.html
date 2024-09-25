@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Christopher Tutje">
+    <meta name="author" content="Christopher Tutje">
+    <title>Christopher Tutje | Java Calculator</title>
+    <link rel="stylesheet" href="../CSS/colorPalette.css">
+    <link rel="stylesheet" href="../CSS/spacing.css">
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+    <style>
+        /* Banner */
+        #banner {
+            background-color: var(--grey);
+            border-bottom: 1px solid var(--slate);
+            padding: var(--spacing-xxl);
+            text-align: center;
+        }
+
+        /* Footer */
+        #footer {
+            background-color: var(--grey);
+            border-top: 1px solid var(--slate);
+            text-align: center;
+            padding: var(--spacing-xxl);
+        }
+
+        /* Navbar */
+        #navbar {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--red);
+            border-top: 1px solid var(--maroon);
+            border-bottom: 1px solid var(--maroon);
+            padding: var(--spacing-m);
+        }
+
+        /* Navbar button styles */
+        #navbar button {
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            margin: 0 0.5rem;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        /* Button hover */
+        #navbar button:hover {
+            background-color: lightgrey;
+        }
+
+        /* Dropdown container (hidden by default) */
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: white;
+            border: 1px solid black;
+            box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+        }
+
+        /* Dropdown link styles */
+        .dropdown a {
+            display: block;
+            padding: 0.8rem;
+            color: black;
+            text-decoration: none;
+        }
+
+        /* Dropdown link hover */
+        .dropdown a:hover {
+            background-color: lightgrey;
+        }
+
+        @media (max-width: 768px) {
+    #navbar {
+        flex-direction: column; /* Stack buttons vertically */
+        padding: var(--spacing-s); /* Reduce padding */
+    }
+
+    #navbar button {
+        font-size: 0.9rem; /* Adjust font size */
+        padding: 0.6rem 1rem; /* Reduce button padding */
+        width: 100%; /* Make buttons take full width */
+        margin-bottom: 0.5rem; /* Add space between buttons */
+    }
+
+    /* Optional: Reduce text size on other sections for mobile */
+    .resume-section h2, .resume-section h3 {
+        font-size: 1.25rem; /* Scale down section titles */
+    }
+
+    .resume-section p {
+        font-size: 0.9rem; /* Scale down paragraph text */
+    }
+}
+
+        /* Blog styles */
+        #blog {
+            padding: var(--spacing-l);
+            max-width: 80%;
+            margin: 0 auto; /* Center the resume content */
+        }
+        
+        .blog-section {
+            background-color: white;
+            border: 1px solid lightgrey;
+            padding: var(--spacing-m);
+            margin-bottom: var(--spacing-m);
+            border-radius: var(--spacing-l); /* Adds rounded corners */
+            box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+        }
+        
+        .blog-section h2 {
+            border-bottom: 0px solid var(--grey);
+            padding-top: calc(1.272em / 2.618) ;
+            padding-right: calc(1.618em / 1.272) ;
+            padding-left: calc(1.618em / 2.618);
+            padding-bottom: var(--spacing-xs);
+            font-size: 1.5rem;
+            color: var(--black);
+        }
+
+        .blog-section h3 {
+            border-bottom: 0px solid var(--grey);
+            padding-top: calc(1.272em / 2.618) ;
+            padding-right: calc(1.618em / 1.272) ;
+            padding-left: calc(1.618em / 2.618);
+            padding-bottom: var(--spacing-xs);
+            font-size: 1.25rem;
+            color: var(--automatic);
+        }
+        
+        .blog-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .blog-section ul li {
+            margin-bottom: 1rem;
+        }
+        
+        .blog-section p {
+            margin-bottom: 1rem;
+            color: var(--automatic);
+        }
+        
+        .blog-section a {
+            color: var(--info);
+            text-decoration: none;
+        }
+        
+        .blog-section a:hover {
+            text-decoration: underline;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- Banner Section -->
+    <header id="banner">
+        <h1Blog</h1>
+        <!-- Placeholder for images/animations -->
+    </header>
+
+    <!-- Navbar Section -->
+    <nav id="navbar">
+        <a href="../index.html"><button>Home</button></a>
+        <a href="https://github.com/ChrisTutje/JavaCalculator" target="_blank"><button>GitHub Repo</button></a>
+        <a href="https://www.youtube.com/watch?v=86iTCXoE6UY&t=1s" target="_blank"><button>Video Demo</button></a>
+        <a href="https://www.linkedin.com/in/christopher-tutje" target="_blank"><button>LinkedIn</button></a>
+    </nav>
+
+    <main id="blog">
+        <h1>Java Calculator</h1>
+        <section class="blog-section">
+        <h2>Summary</h2>
+        <p>As a student project I created a calculator in Java. It is naturally capable of basic arithmetic operations such as addition, subtraction, multiplication, division, powers, and square roots.
+        The calculator is capable of handling integers, decimals, and negative numbers, and has a list of constants like Pi, Phi, euler's constant, and infinity. I also had some fun creating some more niche operations, including floor division, modular division, custom root operations, factorial, "permutation" (which is like factorial, but adds the numbers together instead of multiplying them), and prime factorization. <br>
+        Beyond the basic calculator operations, I created a secondary calculator called the List Operator. This calculator was designed to handle list operations, i.e calculations involving groups of numbers. On the backend it allows the user to populate lists through operations like append and pop, and the user can re-arrange the elements of the list with a sort and shuffle feature. 
+        Once the user has created a list of numbers, they can calculate the list's mean, median, mode, standard deviation, sum, difference, product, quotient, delta, minimum value, maximum value, and the length of the list. <br>
+        Beyond designing the mathematical operations, I also designed a user interface using JUnit. The layout is a simple grid, stylized after a classic calculator's layout. To help the user, I included a help button that pulls up instructions on how to use each of the operations, and there are tooltips with each of the buttons to provide better clarity. Since this was written in Java, I used object oriented programming to treat each calculator as an object with various methods, and the GUI was its own class.
+    
+    </main>
+
+    
+
+    <!-- Footer Section -->
+    <footer id="footer">
+        <p>&copy; 2024 Christopher Tutje. All rights reserved. <a href="https://www.linkedin.com/in/christopher-tutje" target="_blank">LinkedIn</a> <a href="https://github.com/ChrisTutje" target="_blank">Github</a></p>
+        <p><a href="#banner">Back to top</a></p>
+    </footer>
+</body>
+</html>
