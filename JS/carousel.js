@@ -1,25 +1,22 @@
 let currentIndex = 0;
 
 function moveCarousel(direction) {
-    const carouselContainer = document.querySelector('.carousel-container');
     const items = document.querySelectorAll('.carousel-item');
     const totalItems = items.length;
-    const visibleItems = 3; // Number of images visible at once
 
-    // Update the index
-    currentIndex += direction;
+    // Hide current item
+    items[currentIndex].style.display = 'none';
 
-    // Loop around
-    if (currentIndex < 0) {
-        currentIndex = totalItems - visibleItems;
-    } else if (currentIndex >= totalItems - visibleItems + 1) {
-        currentIndex = 0;
-    }
+    // Update index based on direction
+    currentIndex = (currentIndex + direction + totalItems) % totalItems;
 
-    // Calculate the translation
-    const itemWidth = items[0].offsetWidth;
-    const translateX = -(itemWidth * currentIndex);
-
-    // Apply the transformation
-    carouselContainer.style.transform = `translateX(${translateX}px)`;
+    // Show new current item
+    items[currentIndex].style.display = 'flex'; // Adjust display property as needed
 }
+
+// Initialize carousel by showing the first item
+document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll('.carousel-item');
+    items.forEach(item => item.style.display = 'none'); // Hide all items initially
+    items[0].style.display = 'flex'; // Show the first item
+});

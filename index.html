@@ -166,20 +166,60 @@
         #carousel {
             padding: var(--spacing-m);
             text-align: center;
+            overflow: hidden;
         }
 
         .carousel-container {
-            display: flex;
-            justify-content: center;
-            gap: var(--spacing-m);
-        }
+    display: flex;
+    justify-content: center; 
+    gap: var(--spacing-m);
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory; 
+    padding-bottom: var(--spacing-s); 
+}
 
-        .carousel-item img {
-            width: 9.375rem; /* 150px in rem */
-            height: 9.375rem;
-            border-radius: var(--spacing-s);
-            box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
-        }
+.carousel-item {
+    flex: 0 0 auto; 
+    scroll-snap-align: center; 
+}
+
+.carousel-item img {
+    width: 9.375rem; 
+    height: 9.375rem;
+    border-radius: var(--spacing-s);
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+    object-fit: cover; 
+}
+
+/* Arrow button styles */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carousel-arrow.left {
+    left: 0;
+}
+
+.carousel-arrow.right {
+    right: 0;
+}
+
+.carousel-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Add a relative position to the carousel container */
+#carousel {
+    position: relative;
+}
 
         .audio-player {
     display: flex;
@@ -360,7 +400,6 @@
             <p>time-management, resource-management, cashier, serving food, cleaning, lifting, medical care.</p>
         </section>
 
-
         <section class="resume-section">
             <h2>Passions</h2>
         <p>I consider myself to be a polymath with a wide variety of interests including art, music, painting, cinema, science, biology, astronomy, history, philosophy, fencing, computer science, video games, mathematics, Magic the Gathering, and of course programming. In short I'm just a giant nerd.  </p>
@@ -368,33 +407,37 @@
     </main>
 
     <!-- Carousel Section -->
+     <h1>Projects</h1>
     <section id="carousel">
-        <h2>Projects</h2>
+        <button class="carousel-arrow left" onclick="moveCarousel(-1)">&#10094;</button>
         <div class="carousel-container">
             <div class="carousel-item">
                 <a href="Blogs/projectAreciboBlog.html">
-                    <img src="Assets/Images/AreciboImages/Screenshot (60).png" alt="Project Arecibo">
-                </a>
+                <img src="Assets/Images/AreciboImages/Screenshot (60).png" alt="Project Arecibo">
+            </a>
             </div>
             <div class="carousel-item">
-                <a href="Blogs/returnOfTheFallenBlog.html"> 
-                    <img src="Assets/Images/ReturnOfTheFallenImages/Screenshot (26).png" alt="Return of the Fallen">
+                <a href="Blogs/returnOfTheFallenBlog.html">
+                <img src="Assets/Images/ReturnOfTheFallenImages/Screenshot (26).png" alt="Return of the Fallen"> 
                 </a>
             </div>
             <div class="carousel-item">
                 <a href="Blogs/chordDictionaryBlog.html">
-                    <img src="blog3.jpg" alt="Chord Dictionary">
-                </a>
+                <img src="blog3.jpg" alt="Chord Dictionary">
+            </a>
             </div>
             <div class="carousel-item">
                 <a href="Blogs/javaCalculatorBlog.html">
-                    <img src="blog4.jpg" alt="Java Calculator">
-                </a>
+                <img src="blog4.jpg" alt="Java Calculator">
+            </a>
             </div>
         </div>
+        <button class="carousel-arrow right" onclick="moveCarousel(1)">&#10095;</button>
     </section>
     
       <script src="JS/audioPlayer.js"></script>
+      <script src="JS/carousel.js"></script>
+      
 
     <!-- Footer Section -->
     <footer id="footer">
