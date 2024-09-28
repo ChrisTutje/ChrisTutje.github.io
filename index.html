@@ -167,6 +167,7 @@
             padding: var(--spacing-m);
             text-align: center;
             overflow: hidden;
+            position: relative;
         }
 
         .carousel-container {
@@ -176,6 +177,8 @@
     overflow-x: auto; 
     scroll-snap-type: x mandatory; 
     padding-bottom: var(--spacing-s); 
+    position: relative;
+    max-width: 100%;
 }
 
 .carousel-item {
@@ -191,7 +194,6 @@
     object-fit: cover; 
 }
 
-/* Arrow button styles */
 .carousel-arrow {
     position: absolute;
     top: 50%;
@@ -205,20 +207,15 @@
 }
 
 .carousel-arrow.left {
-    left: 0;
+    left: 0rem;
 }
 
 .carousel-arrow.right {
-    right: 0;
+    right: 0rem;
 }
 
 .carousel-arrow:hover {
     background-color: rgba(0, 0, 0, 0.7);
-}
-
-/* Add a relative position to the carousel container */
-#carousel {
-    position: relative;
 }
 
         .audio-player {
@@ -409,8 +406,8 @@
     <!-- Carousel Section -->
     <section id="carousel">
         <h1>Projects</h1>
-        <button class="carousel-arrow left" onclick="moveCarousel(-1)">&#10094;</button>
         <div class="carousel-container">
+            <button class="carousel-arrow left" onclick="moveCarousel(-1)">&#10094;</button>
             <div class="carousel-item">
                 <a href="Blogs/projectAreciboBlog.html">
                     <img src="Assets/Images/AreciboImages/Screenshot (60).png" alt="Project Arecibo">
@@ -435,8 +432,8 @@
                 <p>Java Calculator</p>
             </a>
             </div>
+            <button class="carousel-arrow right" onclick="moveCarousel(1)">&#10095;</button>
         </div>
-        <button class="carousel-arrow right" onclick="moveCarousel(1)">&#10095;</button>
     </section>
     
       <script src="JS/audioPlayer.js"></script>
