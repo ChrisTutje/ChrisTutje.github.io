@@ -1,309 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="author" content="Christopher Tutje">
     <meta name="description" content="Portfolio of Christopher Tutje">
-    <meta name="author" content="Christopher Tutje">
     <title>Christopher Tutje | Portfolio</title>
-    <link rel="stylesheet" href="CSS/colorPalette.css">
-    <link rel="stylesheet" href="CSS/spacing.css">
-    <link rel="stylesheet" href="CSS/reset.css">
-    <link rel="stylesheet" href="CSS/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <script defer src="script.js"></script>
-    <style>
-        /* Banner */
-        #banner {
-            background-color: var(--grey);
-            border-bottom: 1px solid var(--slate);
-            padding: var(--spacing-s);
-            text-align: center;
-        }
-
-        /* Footer */
-        #footer {
-            background-color: var(--grey);
-            border-top: 1px solid var(--slate);
-            text-align: center;
-            padding: var(--spacing-xxl);
-        }
-
-        /* Navbar */
-        #navbar {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            background-color: var(--red);
-            border-top: 1px solid var(--maroon);
-            border-bottom: 1px solid var(--maroon);
-            padding: var(--spacing-m);
-        }
-
-        /* Navbar button styles */
-        #navbar button {
-            background-color: white;
-            color: black;
-            border: none;
-            padding: 0.8rem 1.5rem;
-            margin: 0 0.5rem;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-
-        /* Button hover */
-        #navbar button:hover {
-            background-color: lightgrey;
-        }
-
-        /* Dropdown container (hidden by default) */
-        .dropdown {
-            display: none;
-            position: absolute;
-            background-color: white;
-            border: 1px solid black;
-            box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
-        }
-
-        /* Dropdown link styles */
-        .dropdown a {
-            display: block;
-            padding: 0.8rem;
-            color: black;
-            text-decoration: none;
-        }
-
-        /* Dropdown link hover */
-        .dropdown a:hover {
-            background-color: lightgrey;
-        }
-
-        @media (max-width: 768px) {
-    #navbar {
-        flex-direction: column; /* Stack buttons vertically */
-        padding: var(--spacing-s); /* Reduce padding */
-    }
-
-    #navbar button {
-        font-size: 0.9rem; /* Adjust font size */
-        padding: 0.6rem 1rem; /* Reduce button padding */
-        width: 100%; /* Make buttons take full width */
-        margin-bottom: 0.5rem; /* Add space between buttons */
-    }
-
-    /* Optional: Reduce text size on other sections for mobile */
-    .resume-section h2, .resume-section h3 {
-        font-size: 1.25rem; /* Scale down section titles */
-    }
-
-    .resume-section p {
-        font-size: 0.9rem; /* Scale down paragraph text */
-    }
-}
-
-        /* Resume styles */
-        #resume {
-            padding: var(--spacing-l);
-            max-width: 80%;
-            margin: 0 auto; /* Center the resume content */
-        }
-        
-        .resume-section {
-            background-color: white;
-            border: 1px solid lightgrey;
-            padding: var(--spacing-m);
-            margin-bottom: var(--spacing-m);
-            border-radius: var(--spacing-l); /* Adds rounded corners */
-            box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
-        }
-        
-        .resume-section h2 {
-            border-bottom: 0px solid var(--grey);
-            padding-top: calc(1.272em / 2.618) ;
-            padding-right: calc(1.618em / 1.272) ;
-            padding-left: calc(1.618em / 2.618);
-            padding-bottom: var(--spacing-xs);
-            font-size: 1.5rem;
-            color: var(--black);
-        }
-
-        .resume-section h3 {
-            border-bottom: 0px solid var(--grey);
-            padding-top: calc(1.272em / 2.618) ;
-            padding-right: calc(1.618em / 1.272) ;
-            padding-left: calc(1.618em / 2.618);
-            padding-bottom: var(--spacing-xs);
-            font-size: 1.25rem;
-            color: var(--automatic);
-        }
-        
-        .resume-section ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        
-        .resume-section ul li {
-            margin-bottom: 1rem;
-        }
-        
-        .resume-section p {
-            margin-bottom: 1rem;
-            color: var(--automatic);
-        }
-        
-        .resume-section a {
-            color: var(--info);
-            text-decoration: none;
-        }
-        
-        .resume-section a:hover {
-            text-decoration: underline;
-        }
-
-        /* Carousel */
-        #carousel {
-            padding: var(--spacing-m);
-            text-align: center;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .carousel-container {
-    display: flex;
-    justify-content: center; 
-    gap: var(--spacing-m);
-    overflow-x: auto; 
-    scroll-snap-type: x mandatory; 
-    padding-bottom: var(--spacing-s); 
-    position: relative;
-    max-width: 100%;
-}
-
-.carousel-item {
-    flex: 0 0 auto; 
-    scroll-snap-align: center; 
-}
-
-.carousel-item img {
-    width: 9.375rem; 
-    height: 9.375rem;
-    border-radius: var(--spacing-s);
-    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
-    object-fit: cover; 
-}
-
-.carousel-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 1rem;
-    cursor: pointer;
-    z-index: 1;
-}
-
-.carousel-arrow.left {
-    left: 0rem;
-}
-
-.carousel-arrow.right {
-    right: 0rem;
-}
-
-.carousel-arrow:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-        .audio-player {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 0px solid var(--gloam);
-    background: var(--mutedPurple);
-    width: 100%; 
-    max-width: 280px; 
-    margin: 0 auto;
-    padding: 1rem;
-    box-sizing: border-box; 
-}
-
-.audio-player audio {
-    width: 100%; 
-}
-
-.playlist {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch; 
-    width: 100%;
-}
-
-.playlist button {
-    margin: 0.25rem 0; 
-    padding: 0.5rem;
-    font-size: 0.9rem; 
-    cursor: pointer;
-    width: 100%; 
-}
-
-        /* Sidebar styles */
-        #sidebar {
-            height: 100%;
-            width: 0;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: var(--mutedPurple);
-            overflow-x: hidden;
-            transition: 0.3s;
-            padding-top: 3.75rem;
-        }
-
-        #sidebar a {
-    padding: 0.5rem 1rem;
-    text-decoration: none;
-    font-size: 1rem;
-    color: var(--lightPurple);
-    display: block;
-    transition: 0.3s;
-}
-
-        #sidebar a:hover {
-            color: var(--visited);
-        }
-
-        #sidebar .close-btn {
-    position: absolute;
-    top: 0.625rem; /* 10px */
-    right: 1.5625rem; /* 25px */
-    font-size: 2.25rem; /* 36px */
-}
-
-        /* Button to open sidebar */
-        #open-sidebar-btn {
-            font-size: 1.125rem;
-            cursor: pointer;
-            padding: 0.625rem; /* 10px */
-            background-color: var(--mutedPurple);
-            color: var(--black);
-            border: none;
-            position: fixed;
-            top: 1rem; /* 15px */
-            left: 1rem; /* 15px */
-            z-index: 2;
-        }
-
-    </style>
-</head>
-<body>
-
-    <!-- Sidebar Section -->
-    <div id="sidebar">
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <script defer src="JS/audioPlayer.js"></script>
+    <script defer src="JS/carousel.js"></script>
+    <script defer src="JS/sidebar.js"></script>
+  </head>
+  <body>
+    <header id="hero">
+      <h1 id="welcome-message">Welcome to My Portfolio!</h1>
+      <img
+        src="Assets/Images/ChrisTutjeProfile.jpg"
+        alt="Profile Picture"
+        width="25%"
+        height="50%"
+      />
+      <section id="summary-section">
+        <p></p>
+      </section>
+    </header>
+    <nav class="navbar">
+       <ul class="nav-menu">
+          <h1 class="logo">ChrisTutje</h1>
+          <li class="nav-list"><a class="nav-item" href="contactMe.html" target="_self" title="contact me link">Contact Me</a></li>
+          <li class="nav-list"><a class="nav-item" href="Assets/Documents/Chris%20Tutje%20Resume.pdf" target="_self" title="resume download">Download my Resume</a></li>
+          <li class="nav-list"><a class="nav-item" href="https://www.linkedin.com/in/christopher-tutje" target="_blank" title="LinkedIn link"><img class="navbar-icon" src="Assets/Images/InBug-Black.png" alt="LinkedIn Logo"/>LinkedIn</a></li>
+          <li class="nav-list"><a class="nav-item" href="https://github.com/ChrisTutje" target="_blank" title="GitHub link"> <img class="navbar-icon" src="Assets/Images/github-mark.png" alt="GitHub Logo"/>GitHub</a></li>
+       </ul>
+    </nav>
+        <div id="sidebar">
         <a href="javascript:void(0)" class="close-btn" onclick="toggleSidebar()">&times;</a>
 
         <div class="audio-player">
@@ -320,132 +51,186 @@
           <p>Besides being a programmer, I've been composing my own amateur music since I was in middle school! I was inspired early on by video game music, but have since been inspired by other genres like classical western music, jazz, folk, world, and electronic music. 
             I started my musical journey playing percussion, then piano, and now synthesizers. In fact, one of the reasons I was attracted to programming initially was because of an open source digital synthesizer called Vital, created by Matt Tytel.
             All of the instruments/sound effects featured in my audio projects were created by me using Vital and FL studio. As I'm not a professional musician, most of my music is solo piano work. Hopefully you can enjoy some of it! 
-
           </p>
     </div>
-
     <button id="open-sidebar-btn" onclick="toggleSidebar()">Audio Player</button>
-
-    <!-- Banner Section -->
-    <header id="banner">
-        <h1>Welcome to My Portfolio!</h1>
-        <img src="Assets/Images/ChrisTutjeProfile.jpg" alt="Profile Picture" width="25%" height="50%" style="display: block; margin: 0; border: 5px solid white;">
-        <!-- Placeholder for images/animations -->
-    </header>
-
-    <!-- Navbar Section -->
-    <nav id="navbar">
-        <a href="contactMe.html"><button>Contact Me</button></a>
-        <a href="Assets/Documents/Chris%20Tutje%20Resume.pdf" download>
-            <button>Download my Resume</button>
-        </a>
-        <a href="https://www.linkedin.com/in/christopher-tutje" target="_blank"><button>LinkedIn</button></a>
-        <a href="https://github.com/ChrisTutje" target="_blank"><button>GitHub</button></a>
-    </nav>
-
-    <!-- Main Resume Section -->
     <main id="resume">
-        <section class="resume-section">
-            <h2>Who Am I?</h2>
-            <p>I was born in 1993 in Des Moines, Iowa. As a personal credo, there are three things that I value in particular; Knowledge, Creativity, and Compassion. I have come to value these things over the course of my life based off of my lived experiences.
-            From my experience as a student I value cultivating new skills and learning from the world around me. As an amateur music composer I value self expression, thinking outside of the box, and working to master my craft. With my experience as a healthcare worker, I know that "caring" is a verb, and I care not just about the quality of my work, but the consequences that it will have on my fellow man.         
-            </p>
-        </section>
-        
-        <section class="resume-section">
-            <h2>Education</h2>
-            <p>I grew up near the east side of Des Moines, and am an alumni of <a href="https://east.dmschools.org/" target="_blank">East High School</a>. During this time I also attended <a href="https://centralcampus.dmschools.org/" target="_blank">Central Campus</a> in downtown Des Moines, which is an educational program designed to give high school students an opportunity to learn trade skills and earn college level credit.
-            In 2012 I began attending <a href="https://www.grandview.edu/" target="_blank">Grand View University</a>, a liberal arts university where I double-majored in both Music and Biology. I originally intended to just pursue the biology degree, but after receiving a scholarship for piano performance, I decided to take some time to study music instead of just engaging with it as a hobby.
-            To my surprise, studying music changed my perspective on math, history, and the concept that my work could be more than just a means to and end to reach empty profit, but rather an art to be perfected. After spending a few years working full-time in healthcare, I decided to return to school, this time to pursue an education in computer science.
-            While at <a href="https://www.dmacc.edu/" target="_blank">DMACC</a> I became involved in various clubs like the creative writing club, philosophy club, and for physical fitness I also joined the fencing club, which is something I currently still practice. At <a href="https://www.dmacc.edu/" target="_blank">DMACC</a> I also took an opportunity to join a mentorship program called <a href="https://techwise.talentsprint.com/" target="_blank">TechWise</a>, which is an educational program that takes prospective students from around the world and provides them with tutorship from industry professionals and assigns students with hands-on group projects. 
-            This program has given me additional hands-on practice with programming that I wouldn't have with my classes alone. It has also given me experience collaborating with others remotely and given me access to a network of aspiring tech engineers and practiced professionals.   
-
-            </p>
-        </section>
-
-        <section class="resume-section">
-            <h2>My Past Work Experience</h2>
-            <P>I began my working career when I was in high school as a food service cashier at <a href="https://www.adventurelandresort.com/" target="_blank">Adventureland Parks</a>, a local theme park that is one of Iowa's premier tourist destinations. When I was a senior in high-school, I was part of a nursing program provided by <a href="https://centralcampus.dmschools.org/" target="_blank">Central Campus</a> which offered college credit and a Certified Nurse's Aide license upon completion.
-            I began working as a CNA at <a href="https://www.valleyviewvillage.org/" target="_blank">Valley View Village</a> nursing home to pay for my college, and I continued to work there for several years after I graduated. I believe that my work as a caregiver was important, but it ultimately wasn't a creative field, and it didn't reward my desire to learn new skills. 
-            In 2023 I decided to go back to school to pursue a job in software engineering.  
-            </P>
-        </section>
-
-        <section class="resume-section">
-            <h2>Why Computer Programming?</h2>
-            <p>People have often said that information technology is the industry of the future. I maintain that it is the industry of the present. Since its inception, the modern computer has quickly revolutionized science, entertainment, and economics. With recent advances in fields such as automation, it is clear that information technology will continue to shape the contemporary world in the coming years.
-            On a more personal note, I believe that information technology will allow me to pursue a career that rewards my desire for creative and intellectually stimulating work. 
-            </p>
-        </section>
-
-        <section class="resume-section">
-            <h2>Professional Skills</h2>
-            <p> Through my experience through <a href="https://www.dmacc.edu/" target="_blank">DMACC</a> and <a href="https://techwise.talentsprint.com/" target="_blank">TechWise</a>, I have some experience in the following areas: </p>
-            <h3>Programming Languages</h3>
-            <p>Python, Java, C++</p>
-            <h3>Web Development</h3>
-            <p>HTML, CSS, JavaScript, Vite, Node.js, React.js, Express.js</p>
-            <h3>Relational Databases</h3>
-            <p>SQL, MongoDB</p>
-            <h3>Testing</h3>
-            <p>Jest, Cypress, JUnit</p>
-            <h3>Version Control</h3>
-            <p>GitHub, Gitlab</p>
-            <h3>Miscellaneous Software Tools</h3>
-            <p>VS Code, Docker</p>
-            <h3>Miscellaneous Professional Skills</h3>
-            <p>time-management, resource-management, cashier, serving food, cleaning, lifting, medical care.</p>
-        </section>
-
-        <section class="resume-section">
-            <h2>Passions</h2>
-        <p>I consider myself to be a polymath with a wide variety of interests including art, music, painting, cinema, science, biology, astronomy, history, philosophy, fencing, computer science, video games, mathematics, Magic the Gathering, and of course programming. In short I'm just a giant nerd.  </p>
-        </section>
+      <section id="biography-section">
+        <h2>Who Am I?</h2>
+        <p>
+          I was born in 1993 in Des Moines, Iowa. As a personal credo, there are
+          three things that I value in particular; Knowledge, Creativity, and
+          Compassion. I have come to value these things over the course of my
+          life based off of my lived experiences. From my experience as a
+          student I value cultivating new skills and learning from the world
+          around me. As an amateur music composer I value self expression,
+          thinking outside of the box, and working to master my craft. With my
+          experience as a healthcare worker, I have learned that the word
+          "caring" is a verb that requires action. I don't just care about the
+          quality of my work; I care about the impact that it will have on the
+          rest of the world.
+        </p>
+      </section>
+      <section id="biography-section">
+        <h2>Why Computer Science?</h2>
+        <p>
+          People have often said that information technology is the industry of
+          the future. I maintain that it is the industry of the present. Since
+          its inception, the modern computer has quickly revolutionized science,
+          entertainment, and economics. With recent advances in fields such as
+          automation, it is clear that information technology will continue to
+          shape the contemporary world in the coming years. On a more personal
+          note, I believe that information technology will allow me to pursue a
+          career that rewards my desire for creative and intellectually
+          stimulating work.
+        </p>
+      </section>
+      <section id="skills-section">
+        <h2>Professional Skills</h2>
+        <p>
+          Through my experience through
+          <a href="https://www.dmacc.edu/" target="_blank">DMACC</a> and
+          <a href="https://techwise.talentsprint.com/" target="_blank"
+            >TechWise</a
+          >, I have some experience in the following areas:
+        </p>
+        <h3>Programming Languages</h3>
+        <p>Python, Java, C++</p>
+        <h3>Web Development</h3>
+        <p>HTML, CSS, JavaScript, Vite, Node.js, React.js, Express.js</p>
+        <h3>Relational Databases</h3>
+        <p>SQL, MongoDB</p>
+        <h3>Testing</h3>
+        <p>Jest, Cypress, JUnit</p>
+        <h3>Version Control</h3>
+        <p>GitHub, Gitlab</p>
+        <h3>Miscellaneous Software Tools</h3>
+        <p>VS Code, Docker</p>
+        <h3>Miscellaneous Professional Skills</h3>
+        <p>
+          time-management, resource-management, cashier, serving food, cleaning,
+          lifting, medical care.
+        </p>
+      </section>
+      <section id="education-section">
+        <h2>Education</h2>
+        <p>
+          I grew up near the east side of Des Moines, and am an alumni of
+          <a href="https://east.dmschools.org/" target="_blank"
+            >East High School</a
+          >. During this time I also attended
+          <a href="https://centralcampus.dmschools.org/" target="_blank"
+            >Central Campus</a
+          >
+          in downtown Des Moines, which is an educational program designed to
+          give high school students an opportunity to learn trade skills and
+          earn college level credit. In 2012 I began attending
+          <a href="https://www.grandview.edu/" target="_blank"
+            >Grand View University</a
+          >, a liberal arts university where I double-majored in both Music and
+          Biology. I originally intended to just pursue the biology degree, but
+          after receiving a scholarship for piano performance, I decided to take
+          some time to study music instead of just engaging with it as a hobby.
+          To my surprise, studying music changed my perspective on math,
+          history, and the concept that my work could be more than just a means
+          to and end to reach empty profit, but rather an art to be perfected.
+          After spending a few years working full-time in healthcare, I decided
+          to return to school, this time to pursue an education in computer
+          science. While at
+          <a href="https://www.dmacc.edu/" target="_blank">DMACC</a> I became
+          involved in various clubs like the creative writing club, philosophy
+          club, and for physical fitness I also joined the fencing club, which
+          is something I currently still practice. At
+          <a href="https://www.dmacc.edu/" target="_blank">DMACC</a> I also took
+          an opportunity to join a mentorship program called
+          <a href="https://techwise.talentsprint.com/" target="_blank"
+            >TechWise</a
+          >, which is an educational program that takes prospective students
+          from around the world and provides them with tutorship from industry
+          professionals and assigns students with hands-on group projects. This
+          program has given me additional hands-on practice with programming
+          that I wouldn't have with my classes alone. It has also given me
+          experience collaborating with others remotely and given me access to a
+          network of aspiring tech engineers and practiced professionals.
+        </p>
+      </section>
+      <section id="experience-section">
+        <h2>My Past Work Experience</h2>
+        <p>
+          I began my working career when I was in high school as a food service
+          cashier at
+          <a href="https://www.adventurelandresort.com/" target="_blank"
+            >Adventureland Parks</a
+          >, a local theme park that is one of Iowa's premier tourist
+          destinations. When I was a senior in high-school, I was part of a
+          nursing program provided by
+          <a href="https://centralcampus.dmschools.org/" target="_blank"
+            >Central Campus</a
+          >
+          which offered college credit and a Certified Nurse's Aide license upon
+          completion. I began working as a CNA at
+          <a href="https://www.valleyviewvillage.org/" target="_blank"
+            >Valley View Village</a
+          >
+          nursing home to pay for my college, and I continued to work there for
+          several years after I graduated. I believe that my work as a caregiver
+          was important, but it ultimately wasn't a creative field, and it
+          didn't reward my desire to learn new skills. In 2023 I decided to go
+          back to school to pursue a job in software engineering.
+        </p>
+      </section>
+      <section id="interests-section">
+        <h2>Passions</h2>
+        <p>
+          I consider myself to be a polymath with a wide variety of interests
+          including art, music, painting, cinema, science, biology, astronomy,
+          history, philosophy, fencing, computer science, video games,
+          mathematics, Magic the Gathering, and of course programming.
+        </p>
+      </section>
     </main>
-
-    <!-- Carousel Section -->
-    <section id="carousel">
+        <section id="carousel">
         <h1>Projects</h1>
         <div class="carousel-container">
             <button class="carousel-arrow left" onclick="moveCarousel(-1)">&#10094;</button>
             <div class="carousel-item">
-                <a href="https://christutje.com/webPitchSynthesizer.github.io/">
+                <a href="https://christutje.com/webPitchSynthesizer.github.io/" target="_blank">
                 <img src="Assets/Images/synthesizer.jpg" alt="JavaScript Synthesizer">
                 <p>JavaScript Synthesizer</p>
             </a>
             </div>
                         <div class="carousel-item">
-                <a href="https://christutje.com/javascriptCalculator.github.io/" >
+                <a href="https://christutje.com/javascriptCalculator.github.io/"target="_blank" >
                     <img src="Assets/Images/javaCalculatorImages/calculator.jpg" alt="JavaScript Calculator">
                     <p>JavaScript Calculator</p>
                 </a>
         </div>
                                 <div class="carousel-item">
-                <a href="https://christutje.com/ColorPalette.github.io/" >
+                <a href="https://christutje.com/ColorPalette.github.io/" target="_blank" >
                     <img src="Assets/Images/colorPalette.jpg" alt="Color Palette">
                     <p>Color Palette</p>
                 </a>
         </div>
             <div class="carousel-item">
-                <a href="Blogs/projectAreciboBlog.html">
+                <a href="Blogs/projectAreciboBlog.html" target="_self">
                     <img src="Assets/Images/AreciboImages/ufo.jpg" alt="Project Arecibo">
                     <p>Project Arecibo</p>
                 </a>
         </div>
             <div class="carousel-item">
-                <a href="Blogs/returnOfTheFallenBlog.html">
+                <a href="Blogs/returnOfTheFallenBlog.html" target="_self">
                 <img src="Assets/Images/ReturnOfTheFallenImages/returnOfTheFallen.jpg" alt="Return of the Fallen"> 
                 <p>Return of the Fallen</p>
                 </a>
             </div>
             <div class="carousel-item">
-                <a href="Blogs/chordDictionaryBlog.html">
+                <a href="Blogs/chordDictionaryBlog.html" target="_self">
                 <img src="Assets/Images/chordDictionaryImages/musicBook.jpg" alt="Chord Dictionary">
                 <p>Chord Dictionary</p>
             </a>
             </div>
             <div class="carousel-item">
-                <a href="Blogs/javaCalculatorBlog.html">
+                <a href="Blogs/javaCalculatorBlog.html" target="_self">
                 <img src="Assets/Images/javaCalculatorImages/calculator.jpg" alt="Java Calculator">
                 <p>Java Calculator</p>
             </a>
@@ -453,16 +238,15 @@
             <button class="carousel-arrow right" onclick="moveCarousel(1)">&#10095;</button>
         </div>
     </section>
-    
-      <script src="JS/audioPlayer.js"></script>
-      <script src="JS/carousel.js"></script>
-      
-
-    <!-- Footer Section -->
     <footer id="footer">
-        <p>&copy; 2024 Christopher Tutje. All rights reserved. <a href="https://www.linkedin.com/in/christopher-tutje" target="_blank">LinkedIn</a> <a href="https://github.com/ChrisTutje" target="_blank">Github</a></p>
-        <p><a href="#banner">Back to top</a></p>
+      <p>
+        &copy; 2024 Christopher Tutje. All rights reserved.
+        <a href="https://www.linkedin.com/in/christopher-tutje" target="_blank"
+          >LinkedIn</a
+        >
+        <a href="https://github.com/ChrisTutje" target="_blank">Github</a>
+      </p>
+      <p><a href="#hero">Back to top</a></p>
     </footer>
-    <script src="JS/sidebar.js"></script>
-</body>
+  </body>
 </html>
