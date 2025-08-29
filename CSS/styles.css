@@ -153,11 +153,6 @@ button:active {
 nav {
   padding: var(--spacing-unit, 1em) / 2;
   background-color: var(--dominant-color, #ff0000);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  overflow: hidden;
-  position: relative;
   margin: 0 auto;
   z-index: 1;
 }
@@ -168,6 +163,14 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: space-between;
+  flex-wrap: nowrap;
+  flex-shrink: 1;
+  overflow: hidden;
+  row-gap: 1px;
 }
 
 nav li {
