@@ -34,7 +34,7 @@
           <li class="nav-list"><a class="nav-item" href="https://github.com/ChrisTutje" target="_blank" title="GitHub link">GitHub<img class="navbar-icon" src="Assets/Images/github-mark.png" alt="GitHub Logo"/></a></li>
        </ul>
     </nav>
-        <div id="sidebar">
+        <!-- <div id="sidebar">
         <a href="javascript:void(0)" class="close-btn" onclick="toggleSidebar()">&times;</a>
 
         <div class="audio-player">
@@ -53,7 +53,26 @@
             All of the instruments/sound effects featured in my audio projects were created by me using Vital and FL studio. As I'm not a professional musician, most of my music is solo piano work. Hopefully you can enjoy some of it! 
           </p>
     </div>
-    <button id="open-sidebar-btn" onclick="toggleSidebar()">Audio Player</button>
+    <button id="open-sidebar-btn" onclick="toggleSidebar()">Audio Player</button> -->
+
+    <aside id="sidebar">
+      <div class="audio-player">
+            <audio id="audio-player" controls>
+              <source id="audio-source" src="Assets/Audio/Music/future city.wav" type="audio/wav">
+              Your browser does not support the audio element.
+            </audio>
+        
+            <div class="playlist">
+              <button onclick="playSong('Assets/Audio/Music/future city.wav')">Future City</button>
+              <button onclick="playSong('Assets/Audio/Music/lofi menu theme.wav')">Lofi Menu Theme</button>
+            </div>
+          </div>
+          <!-- <p>Besides being a programmer, I've been composing my own amateur music since I was in middle school! I was inspired early on by video game music, but have since been inspired by other genres like classical western music, jazz, folk, world, and electronic music. 
+            I started my musical journey playing percussion, then piano, and now synthesizers. In fact, one of the reasons I was attracted to programming initially was because of an open source digital synthesizer called Vital, created by Matt Tytel.
+            All of the instruments/sound effects featured in my audio projects were created by me using Vital and FL studio. As I'm not a professional musician, most of my music is solo piano work. Hopefully you can enjoy some of it! 
+          </p> -->
+       </aside>
+    <button class="toggle-sidebar-button" aria-expanded="false" aria-controls="sidebar"> >> </button>
     <main id="resume">
       <section id="biography-section">
         <h2>Who Am I?</h2>
