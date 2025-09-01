@@ -7,7 +7,7 @@
   --font-family: system-ui, "Inter", Arial, sans-serif;
 
   --dominant-color: var(--dragonlord);
-  --surface-color: #f0f0f0;
+  --surface-color: var(--offWhite);
   --accent-color: hsl(from var(--dominant-color) calc(h + 180) s calc(100 - l));
   --text-color: hsl(
     from var(--surface-color) calc(h + 240) calc(100 - s) calc(100 - l)
@@ -43,7 +43,6 @@ body {
 }
 
 header {
-  background-color: var(--surface-color, #ff0000);
   text-align: center;
   padding: calc(var(--spacing-unit) * 0.618);
 }
@@ -86,6 +85,10 @@ h2{
 
 h3{
    font-size: clamp(calc(var(--font-size, 1rem) * .65), calc(.266vw + var(--font-size, 1rem)), calc(var(--font-size, 1rem) * 2.6));
+}
+
+#welcome-message{
+  color: var(--text-color);
 }
 
 p{
@@ -148,6 +151,8 @@ button:active {
 nav {
   padding: clamp(0rem, 2rem, 4rem );
   background-color: var(--dominant-color, #ff0000);
+  border-top: 10px solid white;
+  border-bottom: 10px solid white;
   margin: 0 auto;
   z-index: 1;
 }
@@ -393,4 +398,10 @@ input:not(:placeholder-shown):invalid {
 
 .carousel-arrow:hover {
     background-color: rgba(0, 0, 0, 0.7);
+}
+
+.diagonal-slash-background-pattern {
+   background-color: var(--surface-color, #f0f0f0); 
+   background-image: linear-gradient(315deg, transparent 50%, var(--dominant-color, #ff0000)); 
+   background-size: 100%, 100%; 
 }
