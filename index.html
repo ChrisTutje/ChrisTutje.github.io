@@ -35,30 +35,30 @@
        </ul>
     </nav>
     <aside id="sidebar">
-      <div class="audio-player">
-            <audio id="audio-player" controls>
-              <source id="audio-source" src="Assets/Audio/Music/future city.wav" type="audio/wav">
-              Your browser does not support the audio element.
-            </audio>
-        
-            <div class="playlist">
-              <button onclick="playSong('Assets/Audio/Music/dark dungeon theme midi2.wav')">Dark Dungeon (Intro)</button>
-              <button onclick="playSong('Assets/Audio/Music/darkdungeon theme.mp3')">Dark Dungeon (Full)</button>
-              <button onclick="playSong('Assets/Audio/Music/lofi menu theme.wav')">Lofi Menu Theme</button>
-              <button onclick="playSong('Assets/Audio/Music/forest dungeon.mp3')">Forests of Glamour (mvt.I-IV)</button>
-              <button onclick="playSong('Assets/Audio/Music/battle theme midi.mp3')">Battle Theme</button>
-              <button onclick="playSong('Assets/Audio/Music/boss theme.mp3')">Boss Theme</button>
-              <button onclick="playSong('Assets/Audio/Music/Out of Time .wav')">Out of Time</button>
-              <button onclick="playSong('Assets/Audio/Music/victory theme.wav')">Victory Fanfare</button>
-              <button onclick="playSong('Assets/Audio/Music/future city.wav')">Future City</button>
-              <button onclick="playSong('Assets/Audio/Music/Warp-Speed.mp3')">Warp-Speed Ahead!</button>
-              <button onclick="playSong('Assets/Audio/Music/Arecibo Invaders.wav')">Arecibo Invaders!</button>
-            </div>
-          </div>
-          <!-- <p>Besides being a programmer, I've been composing my own amateur music since I was in middle school! I was inspired early on by video game music, but have since been inspired by other genres like classical western music, jazz, folk, world, and electronic music. 
-            I started my musical journey playing percussion, then piano, and now synthesizers. In fact, one of the reasons I was attracted to programming initially was because of an open source digital synthesizer called Vital, created by Matt Tytel.
-            All of the instruments/sound effects featured in my audio projects were created by me using Vital and FL studio. As I'm not a professional musician, most of my music is solo piano work. Hopefully you can enjoy some of it! 
-          </p> -->
+              <div class="audio-player">
+                <div class="playlist">
+                   <div class="song"><button onclick="playSong('Assets/Audio/Music/dark dungeon theme midi2.wav'); updateSongDescription('Description');"> Dark Dungeon (Intro) </button></div>
+                   <div class="song"><button onclick="playSong('Assets/Audio/Music/darkdungeon theme.mp3'); updateSongDescription('Description');"> Dark Dungeon (Full) </button></div>
+                   <div class="song"><button onclick="playSong('Assets/Audio/Music/lofi menu theme.wav'); updateSongDescription('Description');"> Lofi Menu Theme </button></div>
+                   <div class="song"><button onclick="playSong('Assets/Audio/Music/forest dungeon.mp3'); updateSongDescription('Description');"> Forests of Glamour</button></div>
+                   <div class="song"><button onclick="playSong('Assets/Audio/Music/battle theme midi.mp3'); updateSongDescription('Description');"> Battle Theme </button></div>
+                   <div class="song"><button onclick="playSong('Assets/Audio/Music/boss theme.mp3'); updateSongDescription('Description');"> Boss Theme </button></div>
+                   <div class="song"><button onclick="playSong('Assets/Audio/Music/Out of Time .wav'); updateSongDescription('Description');"> Out of Time </button></div>
+                   <div class="song"><button onclick="playSong('Assets/Audio/Music/victory theme.wav'); updateSongDescription('Description');"> Victory Fanfare </button></div>
+                   <div class="song"><button onclick="playSong('Assets/Audio/Music/future city.wav'); updateSongDescription('Description');"> Future City </button></div>
+                   <div class="song"><button onclick="playSong('Assets/Audio/Music/Warp-Speed.mp3'); updateSongDescription('Description');"> Warp-Speed Ahead! </button></div>
+                   <div class="song"><button onclick="playSong('Assets/Audio/Music/Arecibo Invaders.wav'); updateSongDescription('Description');"> Arecibo Invaders! </button></div>
+                </div>
+                <audio id="audio-controls" controls >
+                  <source id="song" src="Assets/Audio/Music/song.wav" type="audio/wav"/>
+                  Your browser does not support the audio element.
+                </audio>
+                <button id="loop-button" onclick=loopSong()>Loop Off</button>
+                <button id="autoplay-button" onclick=toggleAutoplay()>Autoplay Off</button>
+                <p id="song-description">
+                  Select a song. 
+                </p>
+              </div>
        </aside>
     <button class="toggle-sidebar-button" aria-expanded="false" aria-controls="sidebar"> >> </button>
     <main id="resume">

@@ -252,40 +252,80 @@ input:not(:placeholder-shown):invalid {
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
-.audio-player {
+.audio-player{
+  background: var(--dominant-color, #ff00ff);
+  height: clamp(300px, 50vh, 400px);
+  width: 300px
+}
+
+.audio-player audio{
+  width: 300px;
+}
+
+.playlist{
+  anchor-name: --playlist-anchor;
+  width: 100%;
+  overflow-x: auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 0px solid var(--gloam);
-  background: var(--dominant-color);
-  width: 100%;
-  max-width: 280px;
-  margin: 0 auto;
-  padding: 1rem;
-  box-sizing: border-box;
+  flex-direction: row;
+  gap: 1em;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
 }
 
-.audio-player audio {
-  width: 100%;
+.playlist::scroll-button(right), .playlist::scroll-button(left){
+  position-anchor: --playlist-anchor;
+  background-color: var(--dominant-color, #ff00ff);
+  color: var(--accent-color, #00ff00);
+  font-family: var(--font-family);
+  font-size: var(--font-size, 1rem);
+  content: '>';
+  position: fixed;
+  position-area: right center;
+  translate: -100%;
+  height: 30px;
+  width: 30px;
+  border: none;
+  border-radius: 0%;
+  padding-bottom: .1em;
+  cursor: pointer;
 }
 
-.playlist {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  width: 100%;
+.playlist::scroll-button(left){
+  content: '<';
+  position-area: left center;
+  translate: 100%;
 }
 
-.playlist button {
-  margin: 0.25rem 0;
-  padding: 0.5rem;
-  font-size: 0.9rem;
+.playlist::scroll-button(right):disabled, .playlist::scroll-button(left):disabled{
+  color: var(--disabled, #c0c0c0);
+  opacity: 0.5;
+  cursor: auto;
+}
+
+.playlist::-webkit-scrollbar {
+  display: none;
+}
+
+.song{
+  font-size: var(--font-size, 1rem);
+  flex: 0 0 20em;
+  padding: 0.5em;
+  text-align: center;
+  align-content: center;
+  scroll-snap-align: start;
   cursor: pointer;
   width: 100%;
 }
 
+#song-description{
+  background-color: var(--dominant-color, #ff00ff);
+  color: var(--text-color, #333);
+  height: clamp(225px, 50vh, 300px);
+}
+
 :root{
-     --sidebar-width: 250px;
+     --sidebar-width: 300px;
 }
 
 #sidebar {
