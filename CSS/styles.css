@@ -88,7 +88,6 @@ footer {
   background-color: var(--surface-color, #808080);
   height: calc(var(--cell-height, 8.33vh) * 2);
   border-top: 1px solid black;
-  /* padding: clamp(calc(var(--spacing-unit, 1em) / 2), var(--spacing-unit, 1em), calc(var(--spacing-unit, 1em) * 2)); */
   text-align: center;
 }
 
@@ -201,7 +200,6 @@ button:active {
 }
 
 nav {
-  /* padding: clamp(0rem, 2rem, 4rem ); */
   min-height: var(--cell-height, 8.33vh);
   background-color: var(--dominant-color, #ff0000);
   border-top: 10px solid white;
