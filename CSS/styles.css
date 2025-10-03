@@ -55,14 +55,14 @@ body {
 
 header {
   text-align: center;
-  height: calc(var(--cell-height, 8.33vh) * 7);
+  height: calc(var(--cell-height, 8.33vh) * 6);
 }
 
 .image-frame {
-  border: 1px solid #ffffff;
-  border-radius: 50%; 
+  border: 2px solid #ffffff;
+  border-radius: 1%; 
   height: calc(var(--cell-height, 8.33vh) * 5);
-  width: calc(var(--cell-width, 8.33vw) * 5);
+  width: calc(var(--cell-width, 8.33vw) * 4);
   overflow: hidden; 
   display: flex;
   align-items: center;
@@ -74,7 +74,7 @@ header {
   height: 100%;
   aspect-ratio: 5 / 3;
   object-fit: cover; 
-  border-radius: 50%; 
+  border-radius: 1%; 
   display: block;
 }
 
