@@ -56,11 +56,16 @@ body {
 header {
   text-align: center;
   height: calc(var(--cell-height, 8.33vh) * 6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .image-frame {
   border: 2px solid #ffffff;
-  border-radius: 1%; 
+  border-radius: 50%; 
   height: calc(var(--cell-height, 8.33vh) * 5);
   width: calc(var(--cell-width, 8.33vw) * 4);
   overflow: hidden; 
@@ -74,7 +79,7 @@ header {
   height: 100%;
   aspect-ratio: 5 / 3;
   object-fit: cover; 
-  border-radius: 1%; 
+  border-radius: 0%; 
   display: block;
 }
 
@@ -206,6 +211,8 @@ nav {
   border-bottom: 10px solid white;
   margin: 0 auto;
   z-index: var(--overlay-depth, 1);
+    position: sticky;
+  top: 0;
 }
 
 nav ul {
@@ -438,7 +445,6 @@ input:not(:placeholder-shown):invalid {
 }
 
 .sidebar-item {
-  color: var(--text-color, #333);
   gap: var(--spacing-unit, 1em);
   margin: 0.85em;
   font-size: var(--font-size, 1rem);
