@@ -330,7 +330,7 @@ footer {
 .playlist::scroll-button(right):disabled,
 .playlist::scroll-button(left):disabled {
   color: var(--disabled, #c0c0c0);
-  opacity: 0.5;
+  opacity: 0;
   cursor: auto;
 }
 
@@ -361,8 +361,7 @@ footer {
 }
 
 #sidebar {
-  /* background-color: var(--dominant-color, #ff0000); */
-  background-color: hsl(from var(--dominant-color) h s l / 0.5);
+  background-color: hsl(from var(--dominant-color) h s l / 0.75);
   padding-top: calc(var(--spacing-unit, 1em) * 3.75);
   height: 100vh;
   width: 0px;
