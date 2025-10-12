@@ -75,13 +75,17 @@ h1, h2, h3, h4, h5, h6 {
   line-height: var(--line-height);
 }
 
+
 h1 {
   font-size: clamp(1.5rem, 2vw + 1rem, 3rem);
 }
 
 h2 {
   font-size: clamp(1.25rem, 1.5vw + 0.5rem, 2.5rem);
+}
 
+#resume h2{
+   color: var(--surface-color);
 }
 
 h3 {
@@ -124,7 +128,7 @@ a:focus {
 }
 
 button {
-  background-color: var(--dominant-color, #808080);
+  background-color: hsl(from var(--dominant-color) h s l / 0);
   color: var(--text-color, #333);
   border: none;
   padding: calc(var(--spacing-unit, 1em) * 0.786);
@@ -278,7 +282,6 @@ footer {
 }
 
 .audio-player {
-  background: var(--dominant-color, #ff00ff);
   height: clamp(300px, 50vh, 400px);
   width: 300px;
 }
@@ -302,7 +305,7 @@ footer {
 .playlist::scroll-button(right),
 .playlist::scroll-button(left) {
   position-anchor: --playlist-anchor;
-  background-color: var(--dominant-color, #ff00ff);
+  background-color: hsl(from var(--dominant-color) h s l / 0);
   color: var(--accent-color, #00ff00);
   font-family: var(--font-family);
   font-size: var(--font-size, 1rem);
@@ -347,7 +350,7 @@ footer {
 }
 
 #song-description {
-  background-color: var(--dominant-color, #ff00ff);
+  background-color: hsl(from var(--dominant-color) h s l / 0);
   color: var(--text-color, #333);
   height: clamp(225px, 50vh, 300px);
   margin: 10px;
@@ -358,7 +361,8 @@ footer {
 }
 
 #sidebar {
-  background-color: var(--dominant-color, #ff0000);
+  /* background-color: var(--dominant-color, #ff0000); */
+  background-color: hsl(from var(--dominant-color) h s l / 0.5);
   padding-top: calc(var(--spacing-unit, 1em) * 3.75);
   height: 100vh;
   width: 0px;
@@ -389,7 +393,7 @@ footer {
 }
 
 .toggle-sidebar-button {
-  background-color: var(--dominant-color, #ff0000);
+  background-color: hsl(from var(--dominant-color) h s l / 0.75);
   color: var(--text-color, #333);
   font-size: var(--font-size, 1rem);
   cursor: pointer;
@@ -481,10 +485,96 @@ footer {
 
 .diagonal-slash-background-pattern {
   background-color: var(--surface-color, #f0f0f0);
-  background-image: linear-gradient(
-    315deg,
-    transparent 50%,
-    var(--dominant-color, #ff0000)
-  );
+  background-image: linear-gradient(315deg, transparent 50%, var(--dominant-color, #ff0000));
   background-size: 100%, 100%;
+}
+
+#resume #biography-section{
+  background-image: 
+  radial-gradient(circle at 75% -250%, hsl(from var(--green) h s l / 0.5), hsl(from var(--viridian) h s l / 0.5)),
+  linear-gradient(var(--surface-color), var(--dominant-color));
+  background-origin: padding-box, border-box;
+  background-clip: padding-box, border-box;
+  border: 2px solid transparent;
+  border-radius: 3rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  background-size: 200% 200%;
+  animation: gradientShift 10s ease infinite;
+}
+
+#resume #computer-section{
+  background-image: 
+  radial-gradient(circle at 75% -250%, hsl(from var(--cyan) h s l / 0.5), hsl(from var(--teal) h s l / 0.5)),
+  linear-gradient(var(--surface-color), var(--dominant-color));
+  background-origin: padding-box, border-box;
+  background-clip: padding-box, border-box;
+  border: 2px solid transparent;
+  border-radius: 3rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  background-size: 200% 200%;
+  animation: gradientShift 10s ease infinite;
+}
+
+#resume #skills-section{
+  background-image: 
+  radial-gradient(circle at 75% -250%, hsl(from var(--ochre) h s l / 0.75), hsl(from var(--orange) h s l / 0.75)),
+  linear-gradient(var(--surface-color), var(--dominant-color));
+  background-origin: padding-box, border-box;
+  background-clip: padding-box, border-box;
+  border: 2px solid transparent;
+  border-radius: 3rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  background-size: 200% 200%;
+  animation: gradientShift 10s ease infinite;
+}
+
+#resume #education-section{
+  background-image: 
+  radial-gradient(circle at 75% -250%, hsl(from var(--blue) h s l / 0.5), hsl(from var(--cadet) h s l / 0.5)),
+  linear-gradient(var(--surface-color), var(--dominant-color));
+  background-origin: padding-box, border-box;
+  background-clip: padding-box, border-box;
+  border: 2px solid transparent;
+  border-radius: 3rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  background-size: 200% 200%;
+  animation: gradientShift 10s ease infinite;
+}
+
+#resume #experience-section{
+  background-image: 
+  radial-gradient(circle at 75% -250%, hsl(from var(--magenta) h s l / 0.5), hsl(from var(--wine) h s l / 0.5)),
+  linear-gradient(var(--surface-color), var(--dominant-color));
+  background-origin: padding-box, border-box;
+  background-clip: padding-box, border-box;
+  border: 2px solid transparent;
+  border-radius: 3rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  background-size: 200% 200%;
+  animation: gradientShift 10s ease infinite;
+}
+
+#resume #interests-section{
+  background-image: 
+  radial-gradient(circle at 75% -250%, hsl(from var(--pink) h s l / 0.75), hsl(from var(--crimson) h s l / 0.75)),
+  linear-gradient(var(--surface-color), var(--dominant-color));
+  background-origin: padding-box, border-box;
+  background-clip: padding-box, border-box;
+  border: 2px solid transparent;
+  border-radius: 3rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  background-size: 200% 200%;
+  animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 50% 0%; }
+  50% { background-position: 50% 100%; }
+  100% { background-position: 50% 0%; }
 }
