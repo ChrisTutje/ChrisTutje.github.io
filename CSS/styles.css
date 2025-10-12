@@ -8,7 +8,7 @@
   --line-height: 1.5;
   --font-family: system-ui, "Inter", Arial, sans-serif;
 
-  --dominant-color: var(--dragonlord);
+  --dominant-color: var(--gloam);
   --surface-color: var(--offWhite);
   --accent-color: hsl(from var(--dominant-color) calc(h + 180) s calc(100 - l));
   --text-color: hsl(from var(--surface-color) calc(h + 240) calc(100 - s) calc(100 - l));
@@ -518,7 +518,7 @@ footer {
 
 #resume #skills-section{
   background-image: 
-  radial-gradient(circle at 75% -250%, hsl(from var(--ochre) h s l / 0.75), hsl(from var(--orange) h s l / 0.75)),
+  radial-gradient(circle at 75% -250%, hsl(from var(--umber) h s l / 0.75), hsl(from var(--orange) h s l / 0.75)),
   linear-gradient(var(--surface-color), var(--dominant-color));
   background-origin: padding-box, border-box;
   background-clip: padding-box, border-box;
