@@ -8,7 +8,7 @@
   --line-height: 1.5;
   --font-family: system-ui, "Inter", Arial, sans-serif;
 
-  --dominant-color: var(--gloam);
+  --dominant-color: var(--dragonlord);
   --surface-color: var(--offWhite);
   --accent-color: hsl(from var(--dominant-color) calc(h + 180) s calc(100 - l));
   --text-color: hsl(from var(--surface-color) calc(h + 240) calc(100 - s) calc(100 - l));
@@ -28,8 +28,14 @@ html {
 }
 
 body {
-  background: linear-gradient(to bottom,var(--surface-color, #f0f0f0),#c0c0c0);
-  background-attachment: fixed;
+  --s: 160px; 
+  --c1: var(--white);
+  --c2: var(--surface-color);
+  --g:#0000 45%,var(--c1) 46% 54%,#0000 55%;
+  background:
+    linear-gradient( 60deg,var(--g)),
+    linear-gradient(-60deg,var(--g)) var(--c2);
+  background-size: var(--s) calc(tan(60deg)*var(--s));
   min-height: 100vh;
   text-align: left;
   -webkit-font-smoothing: antialiased;
@@ -38,6 +44,20 @@ body {
 }
 
 header {
+    --s: 160px; 
+  --c1: hsl(from var(--dominant-color) calc(h + 30) s l);
+  --c2: hsl(from var(--dominant-color) calc(h + 330) s l);
+  --c3: var(--surface-color);
+  background:
+    conic-gradient(from  15deg at 86.6%,
+      var(--c3) 25%,var(--c2) 0 150deg,#0000 0),
+    conic-gradient(from -75deg at 50% 13.39%,
+      var(--c1) 60deg,var(--c3) 0 150deg,
+      var(--c2) 0 210deg,#0000 0),
+    conic-gradient(from 15deg at 36.6% 63.4%,
+     var(--c1) 60deg,var(--c3) 0 150deg,
+     var(--c1) 0 210deg,var(--c2) 0 75%,var(--c3) 0);
+  background-size: var(--s) var(--s);
   text-align: center;
   height: calc(var(--cell-height, 8.33vh) * 6);
   display: flex;
@@ -50,8 +70,8 @@ header {
 .image-frame {
   border: 2px solid #ffffff;
   border-radius: 50%; 
-  height: calc(var(--cell-height, 8.33vh) * 5);
-  width: calc(var(--cell-width, 8.33vw) * 4);
+  height: clamp(160px, calc(var(--cell-height, 8.33vh) * 6), 640px);
+  width: clamp(160px, calc(var(--cell-height, 8.33vh) * 6), 640px);
   overflow: hidden; 
   display: flex;
   align-items: center;
@@ -482,11 +502,11 @@ footer {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.diagonal-slash-background-pattern {
+/* .diagonal-slash-background-pattern {
   background-color: var(--surface-color, #f0f0f0);
   background-image: linear-gradient(315deg, transparent 50%, var(--dominant-color, #ff0000));
   background-size: 100%, 100%;
-}
+} */
 
 #resume #biography-section{
   background-image: 
