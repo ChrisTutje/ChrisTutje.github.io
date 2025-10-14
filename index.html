@@ -11,6 +11,7 @@
     <script defer src="JS/audioPlayer.js"></script>
     <script defer src="JS/carousel.js"></script>
     <script defer src="JS/sidebar.js"></script>
+    <script src="JS/colorChanger.js" defer></script>
   </head>
   <body>
     <header class="diagonal-slash-background-pattern" id="hero">
@@ -37,6 +38,24 @@
             >See My Projects</a
           >
         </li>
+<li class="nav-list color-menu">
+  <button class="nav-item" id="color-toggle" title="Change theme color">
+    Color Changer
+  </button>
+  <div id="color-dropdown" class="hidden">
+    <label for="hue-slider">Hue</label>
+    <input type="range" id="hue-slider" min="0" max="360" value="0">
+  </div>
+</li>
+        <li class="nav-list">
+          <a
+          class="nav-item"
+          href="Assets/Documents/Chris%20Tutje%20Resume.pdf"
+          target="_self"
+          title="resume download"
+          >Download my Resume</a
+          >
+        </li>
         <li class="nav-list">
           <a
             class="nav-item"
@@ -44,15 +63,6 @@
             target="_self"
             title="contact me link"
             >Contact Me</a
-          >
-        </li>
-        <li class="nav-list">
-          <a
-            class="nav-item"
-            href="Assets/Documents/Chris%20Tutje%20Resume.pdf"
-            target="_self"
-            title="resume download"
-            >Download my Resume</a
           >
         </li>
         <li class="nav-list">
@@ -196,7 +206,7 @@
           <strong>Compassion</strong>. As a lifelong learner, I’m driven by
           curiosity and growth. As a musician, I value expression and craft. And
           from my time in healthcare, I learned that caring is an action, not
-          just a sentiment. I bring that same mindset to my work—building things
+          just a sentiment. I bring that same mindset to my work, building things
           that matter and make an impact.
         </p>
       </section>

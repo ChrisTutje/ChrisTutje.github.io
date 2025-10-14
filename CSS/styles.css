@@ -175,13 +175,13 @@ nav {
   border-top: 10px solid white;
   border-bottom: 10px solid white;
   margin: 0 auto;
-  z-index: var(--overlay-depth, 1);
+  z-index: 1;
   position: sticky;
   top: 0;
 }
 
 nav ul {
-  gap: var(--spacing-unit, 1em);
+  gap: 0em;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -192,12 +192,11 @@ nav ul {
   align-content: space-between;
   flex-wrap: nowrap;
   flex-shrink: 1;
-  overflow: hidden;
-  row-gap: 1px;
+  overflow: visible;
 }
 
 nav li {
-  padding: var(--spacing-unit, 1em);
+  padding: 0.5em;
   font-family: var(--font-family, sans-serif);
 }
 
@@ -502,12 +501,6 @@ footer {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* .diagonal-slash-background-pattern {
-  background-color: var(--surface-color, #f0f0f0);
-  background-image: linear-gradient(315deg, transparent 50%, var(--dominant-color, #ff0000));
-  background-size: 100%, 100%;
-} */
-
 #resume #biography-section{
   background-image: 
   radial-gradient(circle at 75% -250%, hsl(from var(--green) h s l / 0.5), hsl(from var(--viridian) h s l / 0.5)),
@@ -596,4 +589,54 @@ footer {
   0% { background-position: 50% 0%; }
   50% { background-position: 50% 100%; }
   100% { background-position: 50% 0%; }
+}
+
+.color-menu {
+  position: relative;
+}
+
+.color-menu .nav-item {
+  background: none;
+  border: none;
+  font: inherit;
+  color: var(--accent-color, #333);
+  cursor: pointer;
+  padding: 0.5em 1em;
+  display: inline-block;
+  transition: filter 0.3s;
+  font-size: clamp(0.5rem, 1vw, 2rem);
+  font-weight: bold;
+  text-align: center;
+}
+
+.color-menu .nav-item:hover {
+  filter: brightness(1.2);
+}
+
+#color-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--surface-color);
+  color: var(--text-color, black);
+  border-radius: 0.5em;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  min-width: 160px;
+}
+
+#color-dropdown.hidden {
+  display: none;
+}
+
+#color-dropdown label {
+  display: block;
+  margin-bottom: 0.25em;
+  font-size: 0.9em;
+}
+
+#hue-slider {
+  width: 100%;
+  accent-color: var(--dominant-color);
+  cursor: pointer;
 }
